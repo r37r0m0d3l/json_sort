@@ -1,0 +1,20 @@
+{
+  "short_name": "JSON Sorter",
+  "display": "standalone",
+  "name": "JSON Sorter",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "tile.png",
+      "type": "image/png",
+      "sizes": "558x558"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
