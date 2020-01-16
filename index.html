@@ -69,7 +69,7 @@
               <input
                 v-model="config" v-bind:value="{indent:'4spaces'}" v-on:change="onClickIndent"
                 type="radio" name="paperRadios" id="paperRadios3" value="option 3"
-              > <span>Four spaces</span>
+              ><span>Four spaces</span>
             </label>
           </fieldset>
         </article>
@@ -95,6 +95,8 @@
           </div>
         </div>
       </div>
+    </article>
+  </div>
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script src="js/vendor/prism-1.19.0.min.js"></script>
     <script src="js/vendor/fallback-local-storage-0.0.21.js"></script>
@@ -106,5 +108,10 @@
         navigator.serviceWorker.register("./js/sw.js");
       }
     </script>
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-156431828-1', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>
