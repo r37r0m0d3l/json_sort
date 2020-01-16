@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>JSON Sorter - Sort JSON keys online</title>
-    <meta name="description" content="Sort JSON keys, rearrange your JSON alphabetical">
-    <meta name="keywords" content="json,json sorter,json sort,sort json values,json tool,json sort tool,sort json keys,online json tool">
+    <meta
+      name="description"
+      content="Sort JSON keys, rearrange your JSON alphabetical"
+    />
+    <meta
+      name="keywords"
+      content="json,json sorter,json sort,sort json values,json tool,json sort tool,sort json keys,online json tool"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="icon.png" type="image/png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -18,66 +24,87 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-  <div class="paper container shadow shadow-small" id="app">
-    <center><h4>JSON Sorter</h4></center>
-    <article class="row">
-      <div class="col-5 col">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Input</h4>
-            <div class="form-group">
-              <textarea
-                placeholder="Input JSON here…"
-                class="input-block"
-                v-model="inputJson"
-              >{{ inputJson }}</textarea>
+    <div class="paper container shadow shadow-small" id="app">
+      <center><h4>JSON Sorter</h4></center>
+      <article class="row">
+        <div class="col-5 col">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Input</h4>
+              <div class="form-group">
+                <textarea
+                  placeholder="Input JSON here…"
+                  class="input-block"
+                  v-model="inputJson"
+                >
+{{ inputJson }}</textarea
+                >
+              </div>
+              <center>
+                <button
+                  v-on:click="onClickClear"
+                  class="paper-btn input-block btn-danger"
+                >
+                  Clear
+                </button>
+              </center>
             </div>
-            <center>
-              <button
-                v-on:click="onClickClear"
-                class="paper-btn input-block btn-danger"
-              >Clear</button>
-            </center>
           </div>
         </div>
-      </div>
-      <div class="col-2 col">
-        <article class="article">
-          <center>
-            <button
-              v-on:click="onClickSort"
-              class="paper-btn input-block btn-secondary"
-            >Sort&nbsp;&#x25B7;</button>
-          </center>
-          <br>
-          <br>
-          <fieldset class="form-group">
-            <legend>Indent</legend>
-            <label for="paperRadios1" class="paper-radio">
-              <input
-                v-model="config" v-bind:value="{indent:'2spaces'}" v-on:change="onClickIndent"
-                type="radio" name="paperRadios" id="paperRadios1" value="option 1"
-              ><span>Two spaces</span>
-            </label>
-            <label for="paperRadios2" class="paper-radio">
-              <input
-                v-model="config" v-bind:value="{indent:'tabs'}" v-on:change="onClickIndent"
-                type="radio" name="paperRadios" id="paperRadios2" value="option 2"
-              ><span>Tabs</span>
-            </label>
-            <label for="paperRadios3" class="paper-radio">
-              <input
-                v-model="config" v-bind:value="{indent:'4spaces'}" v-on:change="onClickIndent"
-                type="radio" name="paperRadios" id="paperRadios3" value="option 3"
-              ><span>Four spaces</span>
-            </label>
-          </fieldset>
-        </article>
-      </div>
-      <div class="col-5 col">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Output</h4>
+        <div class="col-2 col">
+          <article class="article">
+            <center>
+              <button
+                v-on:click="onClickSort"
+                class="paper-btn input-block btn-secondary"
+              >
+                Sort&nbsp;&#x25B7;
+              </button>
+            </center>
+            <br />
+            <br />
+            <fieldset class="form-group">
+              <legend>Indent</legend>
+              <label for="paperRadios1" class="paper-radio">
+                <input
+                  v-model="config"
+                  v-bind:value="{indent:'2spaces'}"
+                  v-on:change="onClickIndent"
+                  type="radio"
+                  name="paperRadios"
+                  id="paperRadios1"
+                  value="option 1"
+                /><span>Two spaces</span>
+              </label>
+              <label for="paperRadios2" class="paper-radio">
+                <input
+                  v-model="config"
+                  v-bind:value="{indent:'tabs'}"
+                  v-on:change="onClickIndent"
+                  type="radio"
+                  name="paperRadios"
+                  id="paperRadios2"
+                  value="option 2"
+                /><span>Tabs</span>
+              </label>
+              <label for="paperRadios3" class="paper-radio">
+                <input
+                  v-model="config"
+                  v-bind:value="{indent:'4spaces'}"
+                  v-on:change="onClickIndent"
+                  type="radio"
+                  name="paperRadios"
+                  id="paperRadios3"
+                  value="option 3"
+                /><span>Four spaces</span>
+              </label>
+            </fieldset>
+          </article>
+        </div>
+        <div class="col-5 col">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Output</h4>
               <pre><code
                 contenteditable
                 class="language-json"
@@ -85,18 +112,22 @@
                 v-model="outputJson"
                 v-html="outputCode"
               >{{ outputCode }}</code></pre>
-            <textarea ref="outputTextarea" class="shrink" cols="1" rows="1">{{ outputTextarea }}</textarea>
-            <center>
-              <button
-                v-on:click="onClickCopy"
-                class="paper-btn input-block btn-success"
-              >Copy</button>
-            </center>
+              <textarea ref="outputTextarea" class="shrink" cols="1" rows="1">
+{{ outputTextarea }}</textarea
+              >
+              <center>
+                <button
+                  v-on:click="onClickCopy"
+                  class="paper-btn input-block btn-success"
+                >
+                  Copy
+                </button>
+              </center>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
-  </div>
+      </article>
+    </div>
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script src="js/vendor/prism-1.19.0.min.js"></script>
     <script src="js/vendor/fallback-local-storage-0.0.21.js"></script>
@@ -108,10 +139,17 @@
         navigator.serviceWorker.register("./js/sw.js");
       }
     </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156431828-1"
+    ></script>
     <script>
-      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-      ga('create', 'UA-156431828-1', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-156431828-1");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>
