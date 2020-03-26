@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
@@ -272,7 +274,7 @@ textarea {
   min-height: 65vh;
 }
 code {
-  font-family: "Patrick Hand SC", sans-serif !important;
+  /*font-family: "Patrick Hand SC", sans-serif !important;*/
 }
 textarea {
   min-height: 45vh;
@@ -321,7 +323,10 @@ pre {
   font-display: swap;
 }
 
-*, body * {
-  font-family: "JetBrains Mono Medium", monospace !important;
+html, body, pre, code, kbd, samp, h4 {
+  font-family: 'Press Start 2P', cursive;
 }
 
+code, textarea {
+  font-family: "JetBrains Mono Medium", monospace !important;
+}

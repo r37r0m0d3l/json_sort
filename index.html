@@ -20,32 +20,34 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/paper.min.css" />
+    <link rel="stylesheet" href="css/nes.min.css" />
     <link rel="stylesheet" href="css/prism.css" />
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <div class="paper container shadow shadow-small" id="app">
+    <div classZ="paper container shadow shadow-small" id="app">
       <center><h4>JSON Sorter</h4></center>
       <article class="row">
         <div class="col-5 col">
-          <div class="card">
+          <div class="card nes-container">
             <div class="card-body">
               <h4 class="card-title">Input</h4>
               <div class="form-group">
                 <textarea
                   placeholder="Input JSON here…"
-                  class="input-block"
+                  classZ="input-block"
+                  class="nes-textarea"
                   v-model="inputJson"
                 >
-{{ inputJson }}</textarea
-                >
+{{ inputJson }}</textarea>
               </div>
               <center>
                 <button
                   v-on:click="onClickClear"
-                  class="paper-btn input-block btn-danger"
+                  classZ="paper-btn input-block btn-danger"
+                  class="nes-btn is-error"
                 >
-                  Clear
+                  Clear&nbsp;⭕
                 </button>
               </center>
             </div>
@@ -56,53 +58,61 @@
             <center>
               <button
                 v-on:click="onClickSort"
-                class="paper-btn input-block btn-secondary"
+                classZ="paper-btn input-block btn-secondary"
+                class="nes-btn is-primary"
               >
-                Sort&nbsp;&#x25B7;
+                Sort&nbsp;▶️
               </button>
             </center>
             <br />
             <br />
             <fieldset class="form-group">
               <legend>Indent</legend>
-              <label for="paperRadios1" class="paper-radio">
+              <br />
+              <label for="paperRadios1" classZ="paper-radio">
                 <input
                   v-model="config"
                   v-bind:value="{indent:'2spaces'}"
                   v-on:change="onClickIndent"
+                  class="nes-radio"
                   type="radio"
                   name="paperRadios"
                   id="paperRadios1"
                   value="option 1"
                 /><span>Two spaces</span>
               </label>
-              <label for="paperRadios2" class="paper-radio">
+              <br />
+              <label for="paperRadios2" classZ="paper-radio">
                 <input
                   v-model="config"
                   v-bind:value="{indent:'tabs'}"
                   v-on:change="onClickIndent"
+                  class="nes-radio"
                   type="radio"
                   name="paperRadios"
                   id="paperRadios2"
                   value="option 2"
                 /><span>Tabs</span>
               </label>
-              <label for="paperRadios3" class="paper-radio">
+              <br />
+              <label for="paperRadios3" classZ="paper-radio">
                 <input
                   v-model="config"
                   v-bind:value="{indent:'4spaces'}"
                   v-on:change="onClickIndent"
+                  class="nes-radio"
                   type="radio"
                   name="paperRadios"
                   id="paperRadios3"
                   value="option 3"
-                /><span>Four spaces</span>
+                /><span>Four&nbsp;spaces</span>
               </label>
+              <br />
             </fieldset>
           </article>
         </div>
         <div class="col-5 col">
-          <div class="card">
+          <div class="card nes-container">
             <div class="card-body">
               <h4 class="card-title">Output</h4>
               <pre><code
@@ -118,9 +128,10 @@
               <center>
                 <button
                   v-on:click="onClickCopy"
-                  class="paper-btn input-block btn-success"
+                  classZ="paper-btn input-block btn-success"
+                  class="nes-btn is-success"
                 >
-                  Copy
+                  Copy&nbsp;✔️
                 </button>
               </center>
             </div>

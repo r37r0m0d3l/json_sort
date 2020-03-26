@@ -102,15 +102,26 @@ const app = new Vue({
       this.eventSort();
     },
     eventSort() {
-      const input = this.$data.inputJson;
+      let input = this.$data.inputJson;
       if (input.length === 0) {
         this.setOutput("");
         this.cacheSetInput("");
         return;
       }
       if (!isJson(input)) {
-        this.setOutput("JSON is not valid");
-        return;
+        {
+          let result = undefined;
+          try {
+            eval(`result=${input};`);
+            input = JSON.stringify(result);
+          } catch (error) {
+            //
+          }
+        }
+        if (typeof input !== "string" || !isJson(input)) {
+          this.setOutput("JSON is not valid");
+          return;
+        }
       }
       let format = JSON.parse(input);
       format = collectionSortKeys(format);
