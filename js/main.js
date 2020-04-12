@@ -41,6 +41,9 @@ function isObjectLike(value) {
  */
 function collectionSortKeys(value, isDeep = true) {
   if (!isObjectLike(value)) {
+    if (Array.isArray(value)) {
+      return value.map((arrayValue) => collectionSortKeys(arrayValue, isDeep));
+    }
     return value;
   }
   const keys = objectKeys(value);
@@ -49,6 +52,8 @@ function collectionSortKeys(value, isDeep = true) {
   }
   return keys.reduce((sorted, key) => {
     if (isDeep && isObjectLike(value[key])) {
+      sorted[key] = collectionSortKeys(value[key], isDeep);
+    } else if (isDeep && Array.isArray(value[key])) {
       sorted[key] = collectionSortKeys(value[key], isDeep);
     } else {
       sorted[key] = value[key];
