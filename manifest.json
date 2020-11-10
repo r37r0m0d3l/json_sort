@@ -48,6 +48,13 @@
    "sizes": "192x192",
    "src": "/json_sort/ico/maskable_icon.png",
    "type": "image/png"
+  },
+  {
+   "density": "4.0",
+   "purpose": "any maskable",
+   "sizes": "512x512",
+   "src": "/json_sort/ico/splash.png",
+   "type": "image/png"
   }
  ],
  "manifest_version": 2,
@@ -56,7 +63,7 @@
  "omnibox": {},
  "orientation": "portrait",
  "short_name": "JSON Sorter",
- "start_url": "/?utm_source=homescreen",
+ "start_url": "https://r37r0m0d3l.github.io/json_sort/?utm_source=homescreen",
  "theme_color": "#ffffff",
  "version": "2020.11.10"
 }
