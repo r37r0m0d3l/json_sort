@@ -1,20 +1,20 @@
 {
-  "short_name": "JSON Sorter",
+  "background_color": "#ffffff",
   "display": "standalone",
-  "name": "JSON Sorter",
   "icons": [
     {
+      "sizes": "192x192",
       "src": "icon.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "type": "image/png"
     },
     {
+      "sizes": "558x558",
       "src": "tile.png",
-      "type": "image/png",
-      "sizes": "558x558"
+      "type": "image/png"
     }
   ],
+  "name": "JSON Sorter",
+  "short_name": "JSON Sorter",
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#ffffff",
   "theme_color": "#ffffff"
 }
