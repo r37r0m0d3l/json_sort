@@ -134,7 +134,13 @@ const app = new Vue({
           //
         }
       }
-      let format = JSON.parse(input);
+      // let format = JSON.parse(input);
+      let format = input;
+      try {
+        format = JSON.parse(input);
+      } catch (error) {
+        //
+      }
       format = collectionSortKeys(format);
       switch (this.$data.config.indent) {
         case "2spaces":
