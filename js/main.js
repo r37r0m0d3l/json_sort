@@ -127,6 +127,12 @@ const app = new Vue({
           this.setOutput("JSON is not valid");
           return;
         }
+      } else {
+        try {
+          input = JSON.parse(input);
+        } catch (error) {
+          //
+        }
       }
       let format = JSON.parse(input);
       format = collectionSortKeys(format);
