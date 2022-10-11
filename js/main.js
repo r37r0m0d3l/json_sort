@@ -167,7 +167,11 @@ const app = new Vue({
       return input;
     },
     cacheSetInput(value) {
-      appStorage.setItem("input", value);
+      try {
+        appStorage.setItem("input", JSON.stringify(value));
+      } catch {
+        appStorage.setItem("input", value);
+      }
     },
     cacheGetIndent(value) {
       const indent = appStorage.getItem("indent");
