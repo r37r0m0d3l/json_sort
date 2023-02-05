@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -318,15 +318,69 @@ pre {
 }
 
 @font-face {
-  font-family: 'JetBrainsMonoMedium';
-  src: url('./font/JetBrainsMonoMedium.ttf') format('ttf');
+  font-family: "JetBrainsMonoMedium";
+  src: url("./font/JetBrainsMonoMedium.ttf") format("ttf");
   font-display: swap;
 }
 
-html, body, pre, code, kbd, samp, h4 {
-  font-family: 'Press Start 2P', cursive;
+html,
+body,
+pre,
+code,
+kbd,
+samp,
+h4 {
+  font-family: "Press Start 2P", cursive;
 }
 
-code, textarea {
-  font-family: "JetBrains Mono Medium", monospace !important;
+code,
+textarea {
+  font-family: "JetBrains Mono Medium", "Fira Code", monospace !important;
+}
+
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+  }
+}
+
+body,
+textarea {
+  background-color: var(--color-bg) !important;
+  color: var(--color-fg) !important;
+}
+
+.card {
+  border-color: var(--color-fg) !important;
+}
+
+pre[class*="language-"] > code,
+.token + .operator {
+  background-color: var(--color-bg) !important;
+}
+
+.nes-container {
+  padding: 0.1em !important;
+}
+
+.card {
+  min-height: 85vh;
+}
+
+textarea {
+  height: 65vh;
+}
+
+code {
+  min-height: 66vh;
+}
+
+.is-success {
+  margin-top: 19vh !important;
 }

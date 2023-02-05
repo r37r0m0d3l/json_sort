@@ -1,69 +1,69 @@
 {
- "author": "r37r0m0d3l",
- "background_color": "#ffffff",
- "default_locale": "en",
- "description": "JSON Sorter - Sort JSON keys online",
- "display": "standalone",
- "homepage_url": "https://r37r0m0d3l.github.io/json_sort/",
- "icons": [
-  {
-   "density": "0.75",
-   "sizes": "36x36",
-   "src": "/json_sort/ico/android-icon-36x36.png",
-   "type": "image/png"
-  },
-  {
-   "density": "1.0",
-   "sizes": "48x48",
-   "src": "/json_sort/ico/android-icon-48x48.png",
-   "type": "image/png"
-  },
-  {
-   "density": "1.5",
-   "sizes": "72x72",
-   "src": "/json_sort/ico/android-icon-72x72.png",
-   "type": "image/png"
-  },
-  {
-   "density": "2.0",
-   "sizes": "96x96",
-   "src": "/json_sort/ico/android-icon-96x96.png",
-   "type": "image/png"
-  },
-  {
-   "density": "3.0",
-   "sizes": "144x144",
-   "src": "/json_sort/ico/android-icon-144x144.png",
-   "type": "image/png"
-  },
-  {
-   "density": "4.0",
-   "sizes": "192x192",
-   "src": "/json_sort/ico/android-icon-192x192.png",
-   "type": "image/png"
-  },
-  {
-   "density": "4.0",
-   "purpose": "maskable",
-   "sizes": "192x192",
-   "src": "/json_sort/ico/maskable_icon.png",
-   "type": "image/png"
-  },
-  {
-   "density": "4.0",
-   "purpose": "any maskable",
-   "sizes": "512x512",
-   "src": "/json_sort/ico/splash.png",
-   "type": "image/png"
-  }
- ],
- "manifest_version": 2,
- "name": "JSON Sorter",
- "offline_enabled": true,
- "omnibox": {},
- "orientation": "portrait",
- "short_name": "JSON Sorter",
- "start_url": "https://r37r0m0d3l.github.io/json_sort/?utm_source=homescreen",
- "theme_color": "#ffffff",
- "version": "2023.02.02"
+  "author": "r37r0m0d3l",
+  "background_color": "#ffffff",
+  "default_locale": "en",
+  "description": "JSON Sorter - Sort JSON keys online",
+  "display": "standalone",
+  "homepage_url": "https://r37r0m0d3l.github.io/json_sort/",
+  "icons": [
+    {
+      "density": "0.75",
+      "sizes": "36x36",
+      "src": "/json_sort/ico/android-icon-36x36.png",
+      "type": "image/png"
+    },
+    {
+      "density": "1.0",
+      "sizes": "48x48",
+      "src": "/json_sort/ico/android-icon-48x48.png",
+      "type": "image/png"
+    },
+    {
+      "density": "1.5",
+      "sizes": "72x72",
+      "src": "/json_sort/ico/android-icon-72x72.png",
+      "type": "image/png"
+    },
+    {
+      "density": "2.0",
+      "sizes": "96x96",
+      "src": "/json_sort/ico/android-icon-96x96.png",
+      "type": "image/png"
+    },
+    {
+      "density": "3.0",
+      "sizes": "144x144",
+      "src": "/json_sort/ico/android-icon-144x144.png",
+      "type": "image/png"
+    },
+    {
+      "density": "4.0",
+      "sizes": "192x192",
+      "src": "/json_sort/ico/android-icon-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "density": "4.0",
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "/json_sort/ico/maskable_icon.png",
+      "type": "image/png"
+    },
+    {
+      "density": "4.0",
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "/json_sort/ico/splash.png",
+      "type": "image/png"
+    }
+  ],
+  "manifest_version": 2,
+  "name": "JSON Sorter",
+  "offline_enabled": true,
+  "omnibox": {},
+  "orientation": "portrait",
+  "short_name": "JSON Sorter",
+  "start_url": "https://r37r0m0d3l.github.io/json_sort/?utm_source=homescreen",
+  "theme_color": "#ffffff",
+  "version": "2023.02.05"
 }
